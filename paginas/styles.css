@@ -1,0 +1,315 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url("https://img.freepik.com/foto-gratis/fondo-abstracto-3d-particulas-que-fluye_1048-11869.jpg?t=st=1731535016~exp=1731538616~hmac=b773965d8bd24baf67d67543505f1eef3ac13ffb2973da4a1053d6ff16ebab04&w=900");
+  background-size: cover;
+  color: #000000;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0d47a1; /* Azul */
+  border-bottom: 1px solid #444;
+}
+
+.logo-titulo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 24px;
+}
+header h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 24px;
+}
+/* Filtros en disposición horizontal */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filtros h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #00bcd4; /* Azul claro */
+}
+
+.filtros label,
+.filtros select,
+.filtros button {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+}
+
+.filtros button {
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: #0097a7;
+}
+
+/* Productos */
+.productos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 2;
+  padding-right: 320px; /* Deja espacio suficiente para el detalle del producto */
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.producto p {
+  font-size: 14px;
+  color: #747474;
+}
+
+.producto button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #0097a7;
+}
+
+/* Detalle del Producto */
+.detalle-producto {
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 20px; /* Fijo en la parte derecha */
+  top: 100px; /* Ajustado un poco hacia abajo */
+  z-index: 10; /* Para asegurarse de que quede sobre otros elementos */
+}
+
+.detalle-producto h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#detalleContenido img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#agregarAlCarritoDetalle {
+  background-color: #00bcd4;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#agregarAlCarritoDetalle:hover {
+  background-color: #0097a7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtros {
+    flex-direction: column;
+  }
+
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .productos-lista {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0; /* Elimina el padding en pantallas pequeñas */
+  }
+
+  .producto {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .detalle-producto {
+    width: 90%;
+    margin: 0 auto;
+    position: relative; /* Asegura que no quede fija en pantallas pequeñas */
+    top: 0;
+    right: 0;
+  }
+}
+/* Estilos del resumen de la compra */
+.resumen-compra {
+  flex: 1;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  margin-left: 20px;
+  background-color: #0d47a1; /* Fondo azul */
+  border-radius: 8px;
+  color: #fff; /* Color del texto */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resumen-compra h2{
+  margin-top: 0;
+  color: #fff;
+}
+
+.resumen-compra h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+#subtotalCompra{
+  margin-top: 0;
+  color: #fff;
+}
+#totalCompraConDomicilio {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Estilos del formulario */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #333; /* Borde más claro para los campos de entrada */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #1976d2; /* Fondo azul de los campos */
+  color: #fff; /* Color del texto dentro de los campos */
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+  border-color: #64b5f6; /* Cambio de color en el borde cuando está enfocado */
+  outline: none; /* Elimina el borde por defecto */
+}
+
+.tipo-tarjeta {
+  margin-bottom: 10px;
+}
+
+.tipo-tarjeta label {
+  margin-right: 10px;
+  color: #fff;
+}
+
+/* Botones de la compra */
+#ejecutarCompra,
+#cancelarCompra {
+  width: 100%;
+  padding: 12px;
+  background-color: #2196f3; /* Fondo azul para los botones */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+#ejecutarCompra:hover,
+#cancelarCompra:hover {
+  background-color: #1976d2; /* Fondo azul más oscuro al hacer hover */
+}
+
+/* Asegurando que los elementos no se desborden ni superpongan */
+form,
+.resumen-compra {
+  max-width: 500px; /* Controlamos el ancho para que no se estiren demasiado */
+  margin: 0 auto; /* Centra los contenedores */
+  }
+
+
+@media (max-width: 768px) {
+  .resumen-compra {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+#cancelarCompra {
+  background-color: #e74c3c;
+}

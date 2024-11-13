@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-titulo-container">
+        <img src="/images-20241113T182620Z-001/images/logo.png" alt="Logo" class="logo" />
+      <h1>Revisa tu compra</h1>
+      <button onclick="window.location.href='INICIO.html'">
+        Seguir comprando
+      </button>
+    </header>
+
+    <main class="contenedor-carrito">
+      <section class="carrito-seccion">
+        <table>
+          <thead>
+            <tr>
+              <th>Artículo</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="carritoItems">
+          </tbody>
+        </table>
+      </section>
+      <aside class="resumen-compra">
+        <h2>Tu compra</h2>
+        <p id="subtotalCompra">Subtotal de productos: $0.00</p>
+        <p id="valorDomicilio">Valor del domicilio: $5000.00</p>
+        <p id="totalCompraConDomicilio">
+          Total de la compra (con domicilio): $0.00
+        </p>
+
+        <h3>Información de Tarjeta de Crédito</h3>
+        <form id="tarjetaForm">
+          <label for="nombreTarjeta">Nombre en la tarjeta:</label>
+          <input type="text" id="nombreTarjeta" required />
+
+          <label for="numeroTarjeta">Número de tarjeta:</label>
+          <input type="text" id="numeroTarjeta" required />
+
+          <label for="fechaExpiracion">Fecha de expiración (MM/AA):</label>
+          <input
+            type="text"
+            id="fechaExpiracion"
+            placeholder="MM/AA"
+            required
+          />
+
+          <label for="codigoSeguridad">Código de seguridad:</label>
+          <div class="input-group">
+            <input
+              type="password"
+              id="codigoSeguridad"
+              maxlength="3"
+              required
+            />
+          </div>
+
+          <label for="paisEmision">País de emisión:</label>
+          <select id="paisEmision" required>
+            <option value="">Seleccione un país</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+            <option value="Perú">Perú</option>
+            <option value="España">España</option>
+            <option value="Brasil">Brasil</option>
+           
+            <option value="México">México</option>
+
+          </select>
+
+          <label>Tipo de tarjeta:</label>
+          <div class="tipo-tarjeta">
+            <label
+              ><input
+                type="radio"
+                name="tipoTarjeta"
+                value="Mastercard"
+                required
+              />
+              Mastercard</label
+            >
+            <label
+              ><input type="radio" name="tipoTarjeta" value="Visa" required />
+              Visa</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="tipoTarjeta"
+                value="Prepago"
+                required
+              />
+              Prepago</label
+            >
+          </div>
+        </form>
+
+        <button id="ejecutarCompra">Ejecutar Compra</button>
+        <button id="cancelarCompra" onclick="window.location.href='INICIO.html'">
+          Cancelar Compra
+        </button>
+      </aside>
+    </main>
+
+    <script src="/javascrip/articulos.js"></script>
+    <script src="/javascrip/carrito.js"></script>
+  </body>
+</html>
